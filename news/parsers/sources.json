@@ -1,0 +1,284 @@
+  {
+       "Metacritic_Mov": {
+       "code": "metacritic_mov",
+       "name": "Metacritic",
+       "rss": "https://www.metacritic.com/rss/movies",
+       "category": "Movies",
+       "link": "https://www.metacritic.com"
+   },
+      "Metacritic_TV": {
+       "code": "metacritic_tv",
+       "name": "Metacritic",
+       "rss": "https://www.metacritic.com/rss/tv",
+       "category": "TV",
+       "link": "https://www.metacritic.com"
+   },
+      "Metacritic_Music": {
+       "code": "metacritic_music",
+       "name": "Metacritic",
+       "rss": "https://www.metacritic.com/rss/music",
+       "category": "Music",
+       "link": "https://www.metacritic.com"
+   },
+       "Nintendolife": {
+       "code": "nintendo_games",
+       "name": "NintendoLife",
+       "rss": "http://feeds.feedburner.com/nintendolife/latest?format=xml",
+       "category": "Games",
+       "link": "http://www.nintendolife.com"
+   },
+       "Gamespot": {
+       "code": "gamespot_games",
+       "name": "Gameinformer",
+       "rss": "https://www.gamespot.com/feeds/mashup/",
+       "category": "Games",
+       "link": "https://www.gamespot.com/"
+   },
+       "Ign_Games": {
+       "code": "ign_games",
+       "name": "IGN",
+       "rss": "http://feeds.ign.com/ign/e3-videos",
+       "category": "Games",
+       "link": "https://www.ign.com/"
+   },
+       "WSJ_Tech": {
+       "code": "wsj_tech",
+       "name": "Wall Street Journal",
+       "rss": "http://www.wsj.com/xml/rss/3_7455.xml",
+       "category": "Tech",
+       "link": "http://www.wsj.com/"
+   },
+      "WSJ_Business": {
+       "code": "wsj_business",
+       "name": "Wall Street Journal",
+       "rss": "http://www.wsj.com/xml/rss/3_7014.xml",
+       "category": "Business",
+       "link": "http://www.wsj.com/"
+   },
+      "BBC_Business": {
+       "code": "bbc_business",
+       "name": "BBC",
+       "rss": "http://feeds.bbci.co.uk/news/business/rss.xml",
+       "category": "Business",
+       "link": "https://www.bbc.com"
+   },
+            "BBC_Politics": {
+       "code": "bbc_politics",
+       "name": "BBC",
+       "rss": "http://feeds.bbci.co.uk/news/politics/rss.xml",
+       "category": "Politics",
+       "link": "https://www.bbc.com"
+   },
+      "BBC_health": {
+       "code": "bbc_health",
+       "name": "BBC",
+       "rss": "http://feeds.bbci.co.uk/news/health/rss.xml",
+       "category": "Health",
+       "link": "https://www.bbc.com"
+   },
+      "BBC_Tech": {
+       "code": "bbc_tech",
+       "name": "BBC",
+       "rss": "http://feeds.bbci.co.uk/news/technology/rss.xml",
+       "category": "Tech",
+       "link": "https://www.bbc.com"
+   },
+      "BBC_science": {
+       "code": "bbc_science",
+       "name": "BBC",
+       "rss": "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+       "category": "Environment",
+       "link": "https://www.bbc.com"
+   },
+      "NYT_Business": {
+       "code": "nyt_business",
+       "name": "New York Times",
+       "rss": "http://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+       "category": "Business",
+       "link": "https://www.nytimes.com/"
+   },
+      "NYT_Tech": {
+       "code": "nyt_tech",
+       "name": "New York Times",
+       "rss": "http://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+       "category": "Tech",
+       "link": "https://www.nytimes.com/"
+   },
+      "NYT_Sports": {
+       "code": "nyt_sports",
+       "name": "New York Times",
+       "rss": "http://rss.nytimes.com/services/xml/rss/nyt/Sports.xml",
+       "category": "Sports",
+       "link": "https://www.nytimes.com/"
+   },
+      "NYT_Science": {
+       "code": "nyt_science",
+       "name": "New York Times",
+       "rss": "http://rss.nytimes.com/services/xml/rss/nyt/Science.xml",
+       "category": "Science",
+       "link": "https://www.nytimes.com/"
+   },
+      "NYT_Science2": {
+       "code": "nyt_space",
+       "name": "New York Times",
+       "rss": "http://rss.nytimes.com/services/xml/rss/nyt/Space.xml",
+       "category": "Tech",
+       "link": "https://www.nytimes.com/"
+   },
+      "NYT_Env": {
+       "code": "nyt_environment",
+       "name": "New York Times",
+       "rss": "http://rss.nytimes.com/services/xml/rss/nyt/Environment.xml",
+       "category": "Environment",
+       "link": "https://www.nytimes.com/"
+   },
+      "NYT_Health": {
+       "code": "nyt_health",
+       "name": "New York Times",
+       "rss": "http://rss.nytimes.com/services/xml/rss/nyt/Health.xml",
+       "category": "Health",
+       "link": "https://www.nytimes.com/"
+   },
+      "NYT_Health2": {
+       "code": "nyt_health_2",
+       "name": "New York Times",
+       "rss": "http://rss.nytimes.com/services/xml/rss/nyt/Nutrition.xml",
+       "category": "Health",
+       "link": "https://www.nytimes.com/"
+   },
+      "NYT_Movies": {
+       "code": "nyt_movies",
+       "name": "New York Times",
+       "rss": "http://rss.nytimes.com/services/xml/rss/nyt/Movies.xml",
+       "category": "Movies",
+       "link": "https://www.nytimes.com/"
+   },
+      "NYT_Music": {
+       "code": "nyt_music",
+       "name": "New York Times",
+       "rss": "http://rss.nytimes.com/services/xml/rss/nyt/Music.xml",
+       "category": "Music",
+       "link": "https://www.nytimes.com/"
+   },
+      "NYT_TV": {
+       "code": "nyt_tv",
+       "name": "New York Times",
+       "rss": "http://rss.nytimes.com/services/xml/rss/nyt/Television.xml",
+       "category": "TV",
+       "link": "https://www.nytimes.com/"
+   },
+      "NYT_Books": {
+       "code": "nyt_books",
+       "name": "New York Times",
+       "rss": "http://rss.nytimes.com/services/xml/rss/nyt/Books.xml",
+       "category": "Books",
+       "link": "https://www.nytimes.com/"
+   },
+      "NYT_Art": {
+       "code": "nyt_art",
+       "name": "New York Times",
+       "rss": "http://rss.nytimes.com/services/xml/rss/nyt/Arts.xml",
+       "category": "Art/Culture",
+       "link": "https://www.nytimes.com/"
+   },
+      "NYT_Auto": {
+       "code": "nyt_auto",
+       "name": "New York Times",
+       "rss": "http://rss.nytimes.com/services/xml/rss/nyt/Automobiles.xml",
+       "category": "Auto/Moto",
+       "link": "https://www.nytimes.com/"
+   },
+
+      "Indep_Env": {
+       "code": "indep_env",
+       "name": "Independent",
+       "rss": "http://www.independent.co.uk/environment/rss",
+       "category": "Environment",
+       "link": "https://www.independent.co.uk"
+   },
+      "Indep_Sport": {
+       "code": "indep_sport",
+       "name": "Independent",
+       "rss": "http://www.independent.co.uk/sport/rss",
+       "category": "Sports",
+       "link": "https://www.independent.co.uk"
+   },
+      "Indep_mov": {
+       "code": "indep_mov",
+       "name": "Independent",
+       "rss": "http://www.independent.co.uk/arts-entertainment/films/rss",
+       "category": "Movies",
+       "link": "https://www.independent.co.uk"
+   },
+      "Indep_tv": {
+       "code": "indep_tv",
+       "name": "Independent",
+       "rss": "http://www.independent.co.uk/arts-entertainment/tv/rss",
+       "category": "TV",
+       "link": "https://www.independent.co.uk"
+   },
+      "Indep_art": {
+       "code": "indep_art",
+       "name": "Independent",
+       "rss": "http://www.independent.co.uk/arts-entertainment/art/rss",
+       "category": "Art/Culture",
+       "link": "https://www.independent.co.uk"
+   },
+      "cnn_tech": {
+       "code": "cnn_tech",
+       "name": "CNN News",
+       "rss": "http://rss.cnn.com/rss/edition_technology.rss",
+       "category": "Tech",
+       "link": "https://edition.cnn.com/"
+   },
+      "cnn_science": {
+       "code": "cnn_science",
+       "name": "CNN News",
+       "rss": "http://rss.cnn.com/rss/edition_space.rss",
+       "category": "Science",
+       "link": "https://edition.cnn.com/"
+   },
+      "cnn_sport": {
+       "code": "cnn_sport",
+       "name": "CNN News",
+       "rss": "http://rss.cnn.com/rss/edition_sport.rss",
+       "category": "Sports",
+       "link": "https://edition.cnn.com/"
+   },
+      "abc_politics": {
+       "code": "abc_politics",
+       "name": "ABC News",
+       "rss": "https://abcnews.go.com/abcnews/politicsheadlines",
+       "category": "Politics",
+       "link": "https://abcnews.go.com"
+   },
+      "abc_tech": {
+       "code": "abc_tech",
+       "name": "ABC News",
+       "rss": "https://abcnews.go.com/abcnews/technologyheadlines",
+       "category": "Tech",
+       "link": "https://abcnews.go.com"
+   },
+      "abc_health": {
+       "code": "abc_health",
+       "name": "ABC News",
+       "rss": "https://abcnews.go.com/abcnews/healthheadlines",
+       "category": "Health",
+       "link": "https://abcnews.go.com"
+   },
+      "abc_enter": {
+          "code": "abc_enter",
+          "name": "ABC News",
+          "rss": "https://abcnews.go.com/abcnews/entertainmentheadlines",
+          "category": "Entertainment",
+          "link": "https://abcnews.go.com"
+      },
+      "abc_sports": {
+          "code": "abc_sports",
+          "name": "ABC News",
+          "rss": "https://abcnews.go.com/abcnews/sportsheadlines",
+          "category": "Sports",
+          "link": "https://abcnews.go.com"
+      }
+  }
+

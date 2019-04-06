@@ -1,0 +1,24 @@
+{% if categories %}
+    <h4 class="h6 g-font-weight-700 g-mb-20">Categories</h4>
+<label class="d-flex align-items-center justify-content-between">
+          <span>All</span>
+          <div class="u-check">
+            <input id="all_categs" class="category_widget_all g-hidden-xs-up g-pos-abs g-top-0 g-right-0" name="radGroup1_1" type="checkbox" onChange="form_domain(true);">
+                <div class="u-check-icon-radio-v7">
+                  <i class="fa" data-check-icon="" data-uncheck-icon=""></i>
+                </div>
+          </div>
+    </label>
+    <hr>
+    {% for val in categories %}
+    <label class="d-flex align-items-center justify-content-between">
+          <span>{{ val.name }}</span>
+          <div class="u-check">
+            <input id="{{ val.id }}" class="category_widget g-hidden-xs-up g-pos-abs g-top-0 g-right-0" name="radGroup1_1" type="checkbox" onChange="form_domain(false);">
+                <div class="u-check-icon-radio-v7">
+                  <i class="fa" data-check-icon="" data-uncheck-icon=""></i>
+                </div>
+          </div>
+    </label>
+    {% endfor %}
+{% endif %}

@@ -1,0 +1,12 @@
+{% extends 'news/base.html' %}
+{% load static %}
+{% block content %}
+    {% include 'news/posts.html' %}
+    {% block js %}
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="{% static 'news/custom_js/el-pagination.js'%}"></script>
+    {% endblock %}
+
+{% endblock %}
+
+

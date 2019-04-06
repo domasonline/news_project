@@ -1,0 +1,22 @@
+{% extends 'news/base.html' %}
+{% load crispy_forms_tags %}
+{% block content%}
+    <div class="u-heading-v3-1 g-mb-30">
+                  <h2 class="h5 u-heading-v3__title g-font-primary g-font-weight-700 g-color-gray-dark-v1 text-uppercase g-brd-primary">Welcome</h2>
+                </div>
+    <div>
+    <form class="g-brd-around g-brd-gray-light-v4 g-pa-30 g-mb-30" method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Log In</legend>
+            {{ form|crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-md u-btn-inset u-btn-primary g-mr-10 g-mb-15" type="submit">Log In</button>
+        </div>
+        <div class="border-top pt-3">
+        <small class="text-muted">Don't Have an Account? <a class="ml-2" href="{% url 'user-register' %}">Sign Up Now</a></small>
+    </div>
+    </form>
+    </div>
+{% endblock content %}

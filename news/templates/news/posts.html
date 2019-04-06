@@ -1,0 +1,274 @@
+{% load el_pagination_tags %}
+{% load static %}
+{% if data %}
+{% paginate  data %}
+
+    {% if 'Block' in view_mode %}
+    {% for val1, val2, val3 in data %}
+
+    <div class="row">
+        <div class="col-lg-4 g-mb-30">
+                      <!-- Article -->
+                      <article class="u-shadow-v1-4">
+                        <img class="img-fluid w-100 custom-img-post" src="{{ val1.get_scr }}" alt="Not Found" onerror=this.src="{{ val1.category_id.alt_img }}">
+
+                        <div class="g-pa-25">
+                          <ul class="list-inline small g-color-gray-dark-v4 g-mb-20">
+                            <li class="list-inline-item">
+                              <a class="btn btn-xs u-btn-{{ val1.category_id.color }} text-uppercase rounded-0" href="#!">{{ val1.category_id.name }}</a>
+                            </li>
+                            <li class="list-inline-item">|</li>
+                            <li class="list-inline-item">{{ val1.date|date:'Y-m-d' }}</li>
+                          </ul>
+
+                          <h3 class="h2 g-font-weight-300 g-mb-40">
+                            <a class="no-indent u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{ val1.article_link }}">{{ val1.get_display_title }}</a>
+                          </h3>
+
+                          <div class="media g-font-size-12">
+                              {% if user.is_authenticated %}
+            <div style="display: block; text-align:center; ">
+            <a id="{{ val1.id }}"  class="upvote btn btn-md u-btn-white" onclick="up_vote({{ val1.id }})">
+              <i class="fa fa-angle-up"></i>
+            </a>
+            <h5 id="vote_display{{ val1.id }}" class="mt-1">{{ val1.get_votes }}</h5>
+                <a id="{{ val1.id }}" class="downvote btn btn-md u-btn-white" onclick="down_vote({{ val1.id }})">
+              <i class="fa fa-angle-down"></i>
+            </a>
+            </div>
+            {% else %}
+                <div style="display: block; text-align:center;">
+            <a id="{{ val1.id }}" class="upvote btn btn-md u-btn-white" onclick="on()">
+              <i class="fa fa-angle-up"></i>
+            </a>
+            <h5 id="vote_display{{ val1.id }}" class="mt-1">{{ val1.get_votes }}</h5>
+                <a id="{{ val1.id }}" class="downvote btn btn-md u-btn-white" onclick="on()">
+              <i class="fa fa-angle-down"></i>
+            </a>
+            </div>
+
+            {% endif %}
+                            <div class="align-self-center">
+                              <a class="u-link-v5 g-color-main g-color-primary--hover g-mr-10" href="#!">
+                                <i class="icon-bubbles align-middle g-mr-2"></i>
+    124
+                              </a>
+                                <a class="u-link-v5 g-color-main g-color-primary--hover" href="{{ val1.source_id.link }}">
+                                <i class="icon-note align-middle g-mr-2"></i>{{ val1.source_id.name }}</a>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                      <!-- End Article -->
+                    </div>
+        <div class="col-lg-4 g-mb-30">
+                      <!-- Article -->
+                      <article class="u-shadow-v1-4">
+                        <img class="img-fluid w-100 custom-img-post" src="{{ val2.get_scr }}" alt="Not Found" onerror=this.src="{{ val2.category_id.alt_img }}">
+
+                        <div class="g-pa-25">
+                          <ul class="list-inline small g-color-gray-dark-v4 g-mb-20">
+                            <li class="list-inline-item">
+                              <a class="btn btn-xs u-btn-{{ val2.category_id.color }} text-uppercase rounded-0" href="#!">{{ val2.category_id.name }}</a>
+                            </li>
+                            <li class="list-inline-item">|</li>
+                            <li class="list-inline-item">{{ val2.date|date:'Y-m-d' }}</li>
+                          </ul>
+
+                          <h3 class="h2 g-font-weight-300 g-mb-40">
+                            <a class="no-indent u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{ val2.article_link }}">{{ val2.get_display_title }}</a>
+                          </h3>
+
+                          <div class="media g-font-size-12">
+                              {% if user.is_authenticated %}
+            <div style="display: block; text-align:center; ">
+            <a id="{{ val2.id }}"  class="upvote btn btn-md u-btn-white" onclick="up_vote({{ val2.id }})">
+              <i class="fa fa-angle-up"></i>
+            </a>
+            <h5 id="vote_display{{ val2.id }}" class="mt-1">{{ val2.get_votes }}</h5>
+                <a id="{{ val2.id }}" class="downvote btn btn-md u-btn-white" onclick="down_vote({{ val2.id }})">
+              <i class="fa fa-angle-down"></i>
+            </a>
+            </div>
+            {% else %}
+                <div style="display: block; text-align:center;">
+            <a id="{{ val2.id }}" class="upvote btn btn-md u-btn-white" onclick="on()">
+              <i class="fa fa-angle-up"></i>
+            </a>
+            <h5 id="vote_display{{ val2.id }}" class="mt-1">{{ val2.get_votes }}</h5>
+                <a id="{{ val2.id }}" class="downvote btn btn-md u-btn-white" onclick="on()">
+              <i class="fa fa-angle-down"></i>
+            </a>
+            </div>
+
+            {% endif %}
+                            <div class="align-self-center">
+                              <a class="u-link-v5 g-color-main g-color-primary--hover g-mr-10" href="#!">
+                                <i class="icon-bubbles align-middle g-mr-2"></i>
+    124
+                              </a>
+                                <a class="u-link-v5 g-color-main g-color-primary--hover" href="{{ val2.source_id.link }}">
+                                <i class="icon-note align-middle g-mr-2"></i>{{ val2.source_id.name }}</a>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                      <!-- End Article -->
+                    </div>
+        <div class="col-lg-4 g-mb-30">
+                      <!-- Article -->
+                      <article class="u-shadow-v1-4">
+                        <img class="img-fluid w-100 custom-img-post" src="{{ val3.get_scr }}" alt="Not Found" onerror=this.src="{{ val3.category_id.alt_img }}">
+
+                        <div class="g-pa-25">
+                          <ul class="list-inline small g-color-gray-dark-v4 g-mb-20">
+                            <li class="list-inline-item">
+                              <a class="btn btn-xs u-btn-{{ val3.category_id.color }} text-uppercase rounded-0" href="#!">{{ val3.category_id.name }}</a>
+                            </li>
+                            <li class="list-inline-item">|</li>
+                            <li class="list-inline-item">{{ val3.date|date:'Y-m-d' }}</li>
+                          </ul>
+
+                          <h3 class="h2 g-font-weight-300 g-mb-40">
+                            <a class="no-indent u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{ val3.article_link }}">{{ val3.get_display_title }}</a>
+                          </h3>
+
+                          <div class="media g-font-size-12">
+                              {% if user.is_authenticated %}
+            <div style="display: block; text-align:center; ">
+            <a id="{{ val3.id }}"  class="upvote btn btn-md u-btn-white" onclick="up_vote({{ val3.id }})">
+              <i class="fa fa-angle-up"></i>
+            </a>
+            <h5 id="vote_display{{ val3.id }}" class="mt-1">{{ val3.get_votes }}</h5>
+                <a id="{{ val3.id }}" class="downvote btn btn-md u-btn-white" onclick="down_vote({{ val3.id }})">
+              <i class="fa fa-angle-down"></i>
+            </a>
+            </div>
+            {% else %}
+                <div style="display: block; text-align:center;">
+            <a id="{{ val3.id }}" class="upvote btn btn-md u-btn-white" onclick="on()">
+              <i class="fa fa-angle-up"></i>
+            </a>
+            <h5 id="vote_display{{ val3.id }}" class="mt-1">{{ val3.get_votes }}</h5>
+                <a id="{{ val3.id }}" class="downvote btn btn-md u-btn-white" onclick="on()">
+              <i class="fa fa-angle-down"></i>
+            </a>
+            </div>
+
+            {% endif %}
+                            <div class="align-self-center">
+                              <a class="u-link-v5 g-color-main g-color-primary--hover g-mr-10" href="#!">
+                                <i class="icon-bubbles align-middle g-mr-2"></i>
+    124
+                              </a>
+                                <a class="u-link-v5 g-color-main g-color-primary--hover" href="{{ val3.source_id.link }}">
+                                <i class="icon-note align-middle g-mr-2"></i>{{ val3.source_id.name }}</a>
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                      <!-- End Article -->
+                    </div>
+    </div>
+    {% endfor %}
+        {% else %}
+{% for val in data %}
+
+    <div class="g-mb-60">
+        <div class="row g-mb-30">
+          <div class="col-md-4">
+            <figure class="u-shadow-v25 g-pos-rel g-mb-20 g-mb-0--lg">
+              <img class="img-fluid w-100 custom-img-post" src="{{ val.get_scr }}" alt="Not Found" onerror=this.src="{{ val.category_id.alt_img }}">
+
+              <figcaption class="g-pos-abs g-top-20 g-left-20">
+                <a class="btn btn-xs u-btn-{{ val.category_id.color }} text-uppercase rounded-0" href="#!">{{ val.category_id.name }}</a>
+              </figcaption>
+            </figure>
+          </div>
+          <!-- End Article Image -->
+
+          <!-- Article Content -->
+          <div class="custom-post col-md-7 align-self-center">
+            <h3 class="h4 g-mb-15">
+              <a class="no-indent u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">{{ val.title }}</a>
+            </h3>
+            <div>
+            <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
+              <li class="list-inline-item">
+                <a class="no-indent u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="{{ val.source_id.link }}">{{ val.source_id.name }}</a>
+              </li>
+              <li class="list-inline-item">/</li>
+              <li class="list-inline-item">
+                {{ val.date|date:'Y-m-d' }}
+              </li>
+              <li class="list-inline-item">/</li>
+              <li class="list-inline-item">
+                <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">
+                  <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> 38
+                </a>
+              </li>
+            </ul>
+
+            <p class=" no-indent g-color-gray-dark-v2">{{ val.get_display_text }}</p>
+            <a class="no-indent g-font-size-12" href="{{ val.article_link }}" target="_blank">Read More..</a>
+             </div>
+
+          </div>
+        <div>
+            {% if user.is_authenticated %}
+            <div style="display: block; text-align:center; ">
+            <a id="{{ val.id }}"  class="upvote btn btn-md u-btn-white" onclick="up_vote({{ val.id }})">
+              <i class="fa fa-angle-up"></i>
+            </a>
+            <h5 id="vote_display{{ val.id }}" class="mt-1">{{ val.get_votes }}</h5>
+                <a id="{{ val.id }}" class="downvote btn btn-md u-btn-white" onclick="down_vote({{ val.id }})">
+              <i class="fa fa-angle-down"></i>
+            </a>
+            </div>
+            {% else %}
+                <div style="display: block; text-align:center;" class="mt-4">
+            <a id="{{ val.id }}" class="upvote btn btn-md u-btn-white" onclick="on()">
+              <i class="fa fa-angle-up"></i>
+            </a>
+            <h5 id="vote_display{{ val.id }}" class="mt-1">{{ val.get_votes }}</h5>
+                <a id="{{ val.id }}" class="downvote btn btn-md u-btn-white" onclick="on()">
+              <i class="fa fa-angle-down"></i>
+            </a>
+            </div>
+
+            {% endif %}
+        </div>
+
+        </div>
+        <div class="u-heading-v3-1 g-mb-30">
+        </div>
+      </div>
+{% endfor %}
+        {% endif %}
+{% show_more %}
+
+{% else %}
+  <div>
+    <!-- Yellow Alert -->
+    <div class="alert alert-dismissible fade show g-bg-yellow rounded-0" role="alert">
+      <button type="button" class="close u-alert-close--light" data-dismiss="alert" aria-label="Close">
+      </button>
+
+      <div class="media">
+        <span class="d-flex g-mr-10 g-mt-5">
+
+          <i class="icon-info g-font-size-25"></i>
+
+        </span>
+        <span class="media-body align-self-center">
+
+          <strong>Oops!</strong> No results found for your request.
+
+        </span>
+      </div>
+    </div>
+    <div class="u-divider u-divider-solid u-divider-center g-brd-gray-light-v3 g-my-80">
+  <i class="fa fa-circle u-divider__icon g-bg-white g-color-gray-light-v3"></i>
+</div>
+  </div>
+{% endif %}

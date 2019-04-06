@@ -1,0 +1,99 @@
+{% load el_pagination_tags %}
+{% load static %}
+{% if data %}
+{% paginate  data %}
+{% for val in data %}
+    <div class="g-mb-60">
+        <div class="row g-mb-30">
+          <div class="col-md-4">
+            <figure class="u-shadow-v25 g-pos-rel g-mb-20 g-mb-0--lg">
+              <img class="img-fluid w-100" src="{{ val.get_scr }}" alt="Not Found" onerror=this.src="{% static '/news/img1.jpg' %}">
+
+              <figcaption class="g-pos-abs g-top-20 g-left-20">
+                <a class="btn btn-xs u-btn-{{ val.category_id.color }} text-uppercase rounded-0" href="#!">{{ val.category_id.name }}</a>
+              </figcaption>
+            </figure>
+          </div>
+          <!-- End Article Image -->
+
+          <!-- Article Content -->
+          <div class="col-md-7 align-self-center">
+            <h3 class="h4 g-mb-15">
+              <a class="no-indent u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="#!">{{ val.title }}</a>
+            </h3>
+
+            <ul class="list-inline g-color-gray-dark-v4 g-font-size-12">
+              <li class="list-inline-item">
+                <a class="no-indent u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">{{ val.source_id.name }}</a>
+              </li>
+              <li class="list-inline-item">/</li>
+              <li class="list-inline-item">
+                {{ val.date|date:'Y-m-d' }}
+              </li>
+              <li class="list-inline-item">/</li>
+              <li class="list-inline-item">
+                <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="{{ val.article_link }}"">
+                  <i class="icon-finance-206 u-line-icon-pro align-middle g-pos-rel g-top-1 mr-1"></i> 38
+                </a>
+              </li>
+            </ul>
+
+            <p class=" no-indent g-color-gray-dark-v2">{{ val.get_display_text }}</p>
+            <a class="no-indent g-font-size-12" href="{{ val.article_link }}" target="_blank">Read More..</a>
+          </div>
+
+
+            {% if user.is_authenticated %}
+            <div style="display: block; text-align:center; " class="mt-4">
+            <a id="{{ val.id }}" style="color: red;"  class="upvote btn btn-md u-btn-white" onclick="up_vote({{ val.id }})">
+              <i class="fa fa-angle-up"></i>
+            </a>
+            <h5 id="vote_display{{ val.id }}" class="mt-1">{{ val.get_votes }}</h5>
+                <a id="{{ val.id }}" style="color: red;" class="downvote btn btn-md u-btn-white" onclick="down_vote({{ val.id }})">
+              <i class="fa fa-angle-down"></i>
+            </a>
+            </div>
+            {% else %}
+                <div style="display: block; text-align:center;" class="mt-4">
+            <a id="{{ val.id }}" class="upvote btn btn-md u-btn-white" onclick="on()">
+              <i class="fa fa-angle-up"></i>
+            </a>
+            <h5 id="vote_display{{ val.id }}" class="mt-1">{{ val.get_votes }}</h5>
+                <a id="{{ val.id }}" class="downvote btn btn-md u-btn-white" onclick="on()">
+              <i class="fa fa-angle-down"></i>
+            </a>
+            </div>
+
+            {% endif %}
+        </div>
+        <div class="u-heading-v3-1 g-mb-30">
+        </div>
+      </div>
+{% endfor %}
+{% show_more %}
+
+{% else %}
+  <div>
+    <!-- Yellow Alert -->
+    <div class="alert alert-dismissible fade show g-bg-yellow rounded-0" role="alert">
+      <button type="button" class="close u-alert-close--light" data-dismiss="alert" aria-label="Close">
+      </button>
+
+      <div class="media">
+        <span class="d-flex g-mr-10 g-mt-5">
+
+          <i class="icon-info g-font-size-25"></i>
+
+        </span>
+        <span class="media-body align-self-center">
+
+          <strong>Oops!</strong> No results found for your request.
+
+        </span>
+      </div>
+    </div>
+    <div class="u-divider u-divider-solid u-divider-center g-brd-gray-light-v3 g-my-80">
+  <i class="fa fa-circle u-divider__icon g-bg-white g-color-gray-light-v3"></i>
+</div>
+  </div>
+{% endif %}

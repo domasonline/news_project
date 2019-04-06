@@ -1,0 +1,88 @@
+  {
+    "cat_1": {
+      "name": "Auto/Moto",
+      "color": "blue",
+      "alt_img": "/static/news/static_imgs/books.jpg"
+    },
+    "cat_2": {
+      "name": "Games",
+      "color": "blue",
+      "alt_img": "/static/news/static_imgs/games.jpg"
+    },
+        "cat_3": {
+      "name": "Facts",
+      "color": "blue",
+      "alt_img": "/static/news/static_imgs/facts.jpg"
+    },
+        "cat_4": {
+      "name": "Business",
+      "color": "blue",
+      "alt_img": "/static/news/static_imgs/business.jpg"
+    },
+        "cat_5": {
+      "name": "Tech",
+      "color": "blue",
+      "alt_img": "/static/news/static_imgs/tech.jpg"
+    },
+        "cat_6": {
+      "name": "Science",
+      "color": "blue",
+      "alt_img": "/static/news/static_imgs/science.jpg"
+    },
+        "cat_7": {
+      "name": "Sports",
+      "color": "blue",
+      "alt_img": "/static/news/static_imgs/sports.jpg"
+    },
+        "cat_8": {
+      "name": "Music",
+      "color": "blue",
+      "alt_img": "/static/news/static_imgs/music.jpg"
+    },
+        "cat_9": {
+      "name": "Movies",
+      "color": "blue",
+      "alt_img": "/static/news/static_imgs/movies.jpg"
+    },
+        "cat_10": {
+      "name": "TV",
+      "color": "blue",
+      "alt_img": "/static/news/static_imgs/tv.jpg"
+    },
+        "cat_11": {
+      "name": "Politics",
+      "color": "blue",
+      "alt_img": "/static/news/static_imgs/politics.jpg"
+    },
+    "cat_12": {
+      "name": "Art/Culture",
+      "color": "blue",
+    "alt_img": "/static/news/static_imgs/art.jpg"
+    },
+    "cat_13": {
+      "name": "Entertainment",
+      "color": "blue",
+    "alt_img": "/static/news/static_imgs/enter.jpg"
+    },
+    "cat_14": {
+      "name": "General News",
+      "color": "blue",
+      "alt_img": "/static/news/static_imgs/general.jpg"
+    },
+    "cat_15": {
+      "name": "Environment",
+      "color": "blue",
+    "alt_img": "/static/news/static_imgs/env.jpg"
+    },
+    "cat_16": {
+      "name": "Health",
+      "color": "blue",
+      "alt_img": "/static/news/static_imgs/health.jpg"
+    },
+    "cat_17": {
+      "name": "Books",
+      "color": "blue",
+      "alt_img": "/static/news/static_imgs/books.jpg"
+    }
+  }
+

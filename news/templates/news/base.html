@@ -131,7 +131,7 @@
                 {% else %}
 
                     <div class="col-1">
-                <a id="languages-dropdown-invoker" class="g-color-secondary-dark-v1 g-color-primary--hover g-text-underline--none--hover" href="#!"
+                <a id="languages-dropdown-invoker" class="g-color-secondary-dark-v1 g-color-primary--hover g-text-underline--none--hover"
                    aria-controls="login-dropdown"
                    aria-haspopup="true"
                    aria-expanded="false"
@@ -1121,6 +1121,19 @@
 
 
       <script>
+
+          $(window).on('resize', function () {
+          if (window.outerWidth < 600) {
+              let el = $("[id*='keyword']");
+              el.toggleClass('col-kw', false);
+              el.toggleClass('col-lg-2', true);
+          }else{
+            let el = $("[id*='keyword']");
+              el.toggleClass('col-kw', true);
+              el.toggleClass('col-lg-2', false);
+          }
+
+      });
           var view_mode_global = "List View";
 
           function display_list() {
@@ -1241,6 +1254,18 @@
           pageContainer: $('.container'),
           breakpoint: 991
         });
+
+          if (window.outerWidth < 600) {
+              let el = $("[id*='keyword']");
+              el.toggleClass('col-kw', false);
+              el.toggleClass('col-lg-2', true);
+              el.toggleClass('mb-1', true);
+          }else{
+            let el = $("[id*='keyword']");
+              el.toggleClass('col-kw', true);
+              el.toggleClass('col-lg-2', false);
+              el.toggleClass('mb-1', false);
+          }
 
         setTimeout(function() { // important in this case
           $.HSCore.components.HSStickyBlock.init('.js-sticky-block');
